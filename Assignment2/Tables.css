@@ -1,0 +1,10 @@
+table{
+    width: 700px;
+    border-width: 3px;
+    border-style: solid;
+}
+
+header{
+    background-color: LightBlue;
+    font-style: bold;
+}
