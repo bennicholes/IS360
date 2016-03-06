@@ -6,31 +6,33 @@ body{
 	margin-left: .75in;
 	margin-right: .625in;
 	padding: 8px;
+	font-size: 100%
 }
 
 p{
-	font-family:"Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-family: Franklin Gothic Medium, Arial Narrow, Arial, sans-serif;
 	font-size: 1.2em;
-	text-align: left;
+	text-align: justify;
 	text-indent: .5in;
 }
 
 h1{
-	color: DarkBlue;
+	color: darkblue;
 	font-size: 200%;
 }
 
 h2{
-	color: DarkGreen;
+	color: darkgreen;
 	font-size: 160%;
 }
 
-pIndent{
+p.pIndent{
 	margin-left: .25in;
 	margin-right: .25in;
 	font-style: italic;
+	text-indent: 0px;
 }
 
-code {
-	color: DarkCyan;
+p code {
+	color: darkcyan;
 }

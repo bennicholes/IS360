@@ -1,10 +1,43 @@
 table{
-    width: 700px;
-    border-width: 3px;
-    border-style: solid;
+  width: 700px;
+  border-width: 3px;
+  border-style: solid;
+  border-collapse: collapse;
+  text-align:right;
 }
 
-header{
-    background-color: LightBlue;
-    font-style: bold;
+thead{
+  background-color: LightBlue;
+  font-weight: bold;
+}
+
+tbody{
+  color: DarkBlue;
+}
+
+th,td {
+    width: 100px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+th{
+  font-weight: bold;
+}
+
+td{
+  padding-right: 3px;
+}
+
+td:first-child{
+  text-align: left;
+}
+
+.negative{
+  color: maroon;
+}
+
+.nan{
+  color:black;
 }
