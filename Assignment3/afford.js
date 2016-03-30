@@ -1,62 +1,45 @@
-        function btnCalc_Click()
-        {
-            // Variable declaration
-            var monIncome, alIncome, intIncome;
-            var monIncomeNum, alIncomeNum, intIncomeNum;
-            var totalIncome, incomeOutput;
+function add()
+{
+    var monthIncome, aliIncome, interestIncome, totalIncome,
+        creditCardExpenses, carExpenses, otherExpenses,
+        x,y,z,v;
 
-            var ccPayment, carPayment, otherPayment;
-            var ccPaymentNum, carPaymentNum, otherPaymentNum;
-            var totalExpenses, expensesOutput;
+    monthIncome = document.getElementById("monthlyIncome");
+    aliIncome = document.getElementById("alimonyIncome");
+    interestIncome = document.getElementById("interestIncome");
+    x = document.getElementById("totalIncome");
 
-            var option29, option39;
-            var percentOutput, paymentOutput;
+    monthIncome = parseFloat(monthIncome.value);
+    aliIncome = parseFloat(alimonyIncome.value);
+    interestIncome = parseFloat(interestIncome.value);
 
-            // Total income calculations
-            monIncome = document.getElementById("txtMonIncome");
-            alIncome = document.getElementById("txtAlIncome");
-            intIncome = document.getElementById("txtIntIncome");
-            incomeOutput = document.getElementById("outIncome");
+    totalIncome = monthIncome + aliIncome + interestIncome;
+    x.innerHTML = '$' + totalIncome.toString().match(/^\d+(?:\.\d{0,2})?/);
 
-            monIncomeNum = parseFloat(monIncome.value);
-            alIncomeNum = parseFloat(alIncome.value);
-            intIncomeNum = parseFloat(intIncome.value);
+    creditCardExpenses = document.getElementById("creditCardExpenses");
+    carExpenses = document.getElementById("carExpenses");
+    otherExpenses = document.getElementById("otherExpenses");
+    y = document.getElementById("totalExpenses");
 
-            totalIncome = monIncomeNum + alIncomeNum + intIncomeNum;
-            incomeOutput.innerHTML = totalIncome.toString();
+    creditCardExpenses = parseFloat(creditCardExpenses.value);
+    carExpenses = parseFloat(carExpenses.value);
+    otherExpenses = parseFloat(otherExpenses.value);
 
-            // Total expense calculations
-            ccPayment = document.getElementById("txtCCPay");
-            carPayment = document.getElementById("txtCarPay");
-            otherPayment = document.getElementById("txtOtherPay");
-            expensesOutput = document.getElementById("outExpenses");
+    totalExpenses = creditCardExpenses + carExpenses + otherExpenses;
+    y.innerHTML = '$' +totalExpenses.toString().match(/^\d+(?:\.\d{0,2})?/)
 
-            ccPaymentNum = parseFloat(ccPayment.value);
-            carPaymentNum = parseFloat(carPayment.value);
-            otherPaymentNum = parseFloat(otherPayment.value);
+    option29 = totalIncome * 0.29;
+    option39 = (totalIncome - totalExpenses) * 0.39;
 
-            totalExpenses = ccPaymentNum + carPaymentNum + otherPaymentNum;
-            expensesOutput.innerHTML = totalExpenses.toString();
+    z = document.getElementById("percentage");
+    v = document.getElementById("maximum");
 
-            // Calculate possible payments
-            option29 = totalIncome * 0.29;
-            option39 = (totalIncome - totalExpenses) * 0.39;
-            percentOutput = document.getElementById("outPercentage");
-            paymentOutput = document.getElementById("outMaxPay");
-
-            // Display lesser
-            if( option29 < option39 )
-            {
-                percentOutput.innerHTML = "29%";
-                paymentOutput.innerHTML = roundNum(option29);
-            }
-            else
-            {
-                percentOutput.innerHTML = "39%";
-                paymentOutput.innerHTML = roundNum(option39);
-            }
-
-        }
-
-        // Function rounds number to two decimal places
-        // Converts to string datatype to preserve trailing zeros
+    if( option29 < option39 ){
+        z.innerHTML = "29%";
+        v.innerHTML = '$' + option29.toString().match(/^\d+(?:\.\d{0,2})?/);
+    }
+    else{
+        z.innerHTML = "39%";
+        v.innerHTML = '$' + option39.toString().match(/^\d+(?:\.\d{0,2})?/);
+    }
+}

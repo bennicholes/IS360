@@ -4,13 +4,19 @@
 <head>
     <meta charset="utf-8">
     <script src="compoundInterest.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
     <title>Compound Interest</title>
 </head>
 
 <body>
+    <a href="Index.htm">Index</a>
+    <br>
+    <a href="Afford.htm">Afford</a>
+    <br>
+    <a href="Payment.htm">Payment</a>
+    <hr/>
         <fieldset>
-            <legend>Loan Payment</legend>
-
+            <legend>Interest</legend>
             <table>
                 <tr>
                     <td>Initial Loan:</td>
@@ -24,17 +30,16 @@
                     <td>Interest Rate per Period:</td>
                     <td><input type="number" id="interestRate" /></td>
                 </tr>
-                <tr>
-                    <td>
-                        <input id="interestCalculate" type="button" value="Calculate" 
-                               onclick="interest()" />
-                    </td>
-                    <td>
-                        <span id="total"></span>
-                    </td>
-                </tr>
             </table>
         </fieldset>
+    <fieldset>
+        <legend>Total</legend>
+        <tr>
+           <td> <input id="interestCalculate" type="button" value="Calculate" onclick="interest()" /></td>
+            <td><span id="total"></span></td>
+        </tr>
+    </fieldset>    
+
 
 </body>
 

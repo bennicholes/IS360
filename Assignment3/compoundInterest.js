@@ -8,12 +8,14 @@ function interest() {
     
     initialNum = parseFloat(operand1.value);
     periodNum = parseFloat(operand2.value);
-    rateNum = parseFloat(operand3.value);
+    rateNum = parseFloat(operand3.value) / 100;
     
+    result = initialNum * Math.pow(1 + rateNum, periodNum);
+
     for (i = 0; i < periodNum; i++) {
         interestAdded = initialNum * rateNum;
         initialNum += interestAdded;
     }
     
-    v.innerHTML = "The total amount is: " + (Math.round(initialNum * 100) / 100).toString();
+    v.innerHTML = "The total interest amount is: " + '$' + result.toString().match(/^\d+(?:\.\d{0,2})?/);
 }

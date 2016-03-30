@@ -3,9 +3,16 @@
 <head>
     <meta charset="utf-8">
     <script src="afford.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
     <title>Afford</title>
 </head>
 <body>
+    <a href="index.htm">Index</a>
+    <br>
+    <a href="CompoundInterest.htm">CompoundInterest</a>
+    <br>
+    <a href="Payment.htm">Payment</a>
+    <hr/>
         <fieldset>
             <legend>Income</legend>
 
@@ -21,15 +28,6 @@
                 <tr>
                     <td>Interest/Dividend Income:</td>
                     <td><input type="number" id="interestIncome" /></td>
-                </tr>
-                <tr>
-                    <td>
-                        <input id="incomeCalculate" type="button" value="Add" 
-                               onclick="add()" />
-                    </td>
-                    <td>
-                        <span id="totalIncome"></span>
-                    </td>
                 </tr>
             </table>
         </fieldset>
@@ -50,16 +48,39 @@
                     <td>Interest Rate (Years):</td>
                     <td><input type="number" id="otherExpenses" /></td>
                 </tr>
-                <tr>
-                    <td>
-                        <input id="expensesCalculate" type="button" value="Add" 
-                               onclick="payment()" />
-                    </td>
-                    <td>
-                        <span id="totalExpenses"></span>
-                    </td>
-                </tr>
             </table>
         </fieldset>
+    <fieldset>
+        <legend>Results</legend>
+        <table>
+            <tr>
+                <input id="expensesCalculate" type="button" value="Calculate" onclick="add()"/>
+            </tr>
+            <tr>
+                <td>Maximum Affordable Payment:</td>
+                <td>
+                    <span id="maximum"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Percentage Used:</td>
+                <td>
+                    <span id="percentage"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Total Income:</td>
+                <td>
+                    <span id="totalIncome"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Total Expenses:</td>
+                <td>
+                    <span id="totalExpenses" />
+                </td>
+            </tr>
+        </table>
+    </fieldset>
 </body>
 </html>

@@ -4,10 +4,17 @@
 <head>
     <meta charset="utf-8">
     <script src="payment.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
     <title>Loan Payment</title>
 </head>
 
 <body>
+    <a href="Index.htm">Index</a>
+    <br>
+    <a href="CompoundInterest.htm">CompoundInterest</a>
+    <br>
+    <a href="Payment.htm">Payment</a>
+    <hr/>
         <fieldset>
             <legend>Loan Payment</legend>
 
@@ -24,17 +31,17 @@
                     <td>Interest Rate (Years):</td>
                     <td><input type="number" id="interestRate" /></td>
                 </tr>
-                <tr>
-                    <td>
-                        <input id="interestCalculate" type="button" value="Calculate" 
-                               onclick="payment()" />
-                    </td>
-                    <td>
-                        <span id="paymentAmount"></span>
-                    </td>
-                </tr>
             </table>
         </fieldset>
+    
+    <fieldset>
+        <legend>Total</legend>
+        <tr>
+           <td> <input id="interestCalculate" type="button" value="Calculate" onclick="payment()" /></td>
+                    <td><span id="paymentAmount"></span></td>
+
+        </tr>
+    </fieldset>    
 
 </body>
 

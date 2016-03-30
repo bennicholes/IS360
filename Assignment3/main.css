@@ -1,0 +1,23 @@
+body {
+    font-family: Arial;
+}
+
+tr {
+    text-align: right;
+}
+
+span{
+    color:darkblue;
+    font-family:Courier New, Courier, monospace;
+    font-weight: bold;
+}
+
+input{
+    font-family:Courier New, Courier, monospace;
+}
+
+fieldset{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+

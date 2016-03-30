@@ -10,10 +10,10 @@ function payment() {
     
     initialNum = parseFloat(operand1.value);
     periodNum = 12 * parseFloat(operand2.value);
-    rateNum = parseFloat(operand3.value) / 12;
+    rateNum = parseFloat(operand3.value) / 100 / 12;
     exponent = Math.pow((1 + rateNum),(-periodNum));
 
-    paymentAmount = ((rateNum * initialNum) / (1 - exponent));
-
-    v.innerHTML = "The total amount is: " + (Math.round(paymentAmount * 100) / 100).toString();
+    paymentAmount = (rateNum * initialNum) / (1 - Math.pow(1 + rateNum, -1 * periodNum));
+    
+    v.innerHTML = "The total amount is: " + '$' + paymentAmount.toString().match(/^\d+(?:\.\d{0,2})?/);
 }
