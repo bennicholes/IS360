@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <script src="compoundInterest.js"></script>
+    <title>Compound Interest</title>
+</head>
+
+<body>
+        <fieldset>
+            <legend>Loan Payment</legend>
+
+            <table>
+                <tr>
+                    <td>Initial Loan:</td>
+                    <td><input type="number" id="initialInvestment" /></td>
+                </tr>
+                <tr>
+                    <td>Number of Periods:</td>
+                    <td><input type="number" id="noPeriods" /></td>
+                </tr>
+                <tr>
+                    <td>Interest Rate per Period:</td>
+                    <td><input type="number" id="interestRate" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="interestCalculate" type="button" value="Calculate" 
+                               onclick="interest()" />
+                    </td>
+                    <td>
+                        <span id="total"></span>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+</body>
+
+</html>

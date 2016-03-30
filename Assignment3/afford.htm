@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="afford.js"></script>
+    <title>Afford</title>
+</head>
+<body>
+        <fieldset>
+            <legend>Income</legend>
+
+            <table>
+                <tr>
+                    <td>Monthly Income:</td>
+                    <td><input type="number" id="monthlyIncome" /></td>
+                </tr>
+                <tr>
+                    <td>Alimony Income:</td>
+                    <td><input type="number" id="alimonyIncome" /></td>
+                </tr>
+                <tr>
+                    <td>Interest/Dividend Income:</td>
+                    <td><input type="number" id="interestIncome" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="incomeCalculate" type="button" value="Add" 
+                               onclick="add()" />
+                    </td>
+                    <td>
+                        <span id="totalIncome"></span>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    
+            <fieldset>
+            <legend>Expenses</legend>
+
+            <table>
+                <tr>
+                    <td>Credit Card Expenses:</td>
+                    <td><input type="number" id="creditCardExpenses" /></td>
+                </tr>
+                <tr>
+                    <td>Car Expenses:</td>
+                    <td><input type="number" id="carExpenses" /></td>
+                </tr>
+                <tr>
+                    <td>Interest Rate (Years):</td>
+                    <td><input type="number" id="otherExpenses" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="expensesCalculate" type="button" value="Add" 
+                               onclick="payment()" />
+                    </td>
+                    <td>
+                        <span id="totalExpenses"></span>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+</body>
+</html>

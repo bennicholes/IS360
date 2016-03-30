@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <script src="payment.js"></script>
+    <title>Loan Payment</title>
+</head>
+
+<body>
+        <fieldset>
+            <legend>Loan Payment</legend>
+
+            <table>
+                <tr>
+                    <td>Initial Loan Amount:</td>
+                    <td><input type="number" id="initialLoan" /></td>
+                </tr>
+                <tr>
+                    <td>Number of Periods (Years):</td>
+                    <td><input type="number" id="noPeriods" /></td>
+                </tr>
+                <tr>
+                    <td>Interest Rate (Years):</td>
+                    <td><input type="number" id="interestRate" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="interestCalculate" type="button" value="Calculate" 
+                               onclick="payment()" />
+                    </td>
+                    <td>
+                        <span id="paymentAmount"></span>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+</body>
+
+</html>
