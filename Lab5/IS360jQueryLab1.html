@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0079)http://business.unr.edu/faculty/ekedahl/IS360/Topic8jQuery/IS360jQueryLab1.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("tr:odd").css("background-color", "lightgrey")
+            $("tr:even").css("background-color", "lightgreen")
+            $("th").css("background-color", "white")
+        });
+
+        $(function () {
+            $("h1").mouseover(function () {
+                $(this).css("color", "maroon");
+            });
+        });
+
+        $(function () {
+            $("h1").mouseout(function () {
+                $(this).css("color", "black");
+            });
+        });
+
+        $(function () {
+            $("article").click(function () {
+                $(this).children().toggle(500);
+                $(this).find('h1').show(500);
+            });
+        });
+
+        $(function () {
+            $("#btnFadeIn").click(function () {
+                $("#NVLogo").fadeIn(1500);
+            });
+        });
+
+        $(function () {
+            $("#btnFadeOut").click(function () {
+                $("#NVLogo").fadeOut(1500);
+            });
+        });
+
+        $(function () {
+            $("#btnSlideIn").click(function () {
+                $("#NVLogo").slideDown(1500);
+            });
+        });
+
+        $(function () {
+            $("#btnSlideOut").click(function () {
+                $("#NVLogo").slideUp(1500);
+            });
+        });
+
+
+        $(function () {
+            $("#btnAnimate").click(function () {
+                $("#divAnimate").animate({ left: '7500px' }, "slow");
+                $("#divAnimate").animate({ left: '0px' }, "slow");
+            });
+        });
+
+
+    </script>
+        <style type="text/css">
+            table
+        {
+
+            border-color:darkblue;
+            border-style:solid;
+        }
+        td
+        {
+            border-color:lightblue;
+            border-style:solid;
+
+        }
+        </style>
+
+    </head>
+    <body>
+        <button id="btnAnimate" type="button">Animate</button>
+        <br>
+        <div id="divAnimate" style="background-color:lightgreen;height:50px;width:200px;position:absolute">jQuery</div>
+        <br><br><br><br><br>
+        <table>
+            <tbody><tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+            </tr>
+            <tr>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+            </tr>
+        </tbody></table>
+
+        <br>
+
+        <button id="btnFadeIn" type="button">Fade In</button>
+        <button id="btnFadeOut" type="button">Fade Out</button>
+        <button id="btnSlideIn" type="button">Slide In</button>
+        <button id="btnSlideOut" type="button">Slide Out</button>
+        <br><br>
+        <img id="NVLogo" src="nevada.gif">
+
+        <article>
+            <h1>El Nino</h1>
+            <p>The strongest El Nino on record is expected to drench the southern half of United States this
+        fall and winter, according to the National Oceanic and Atmospheric Association (NOAA).
+        The meteorological phenomenon will undoubtedly bring benefits for some industries and
+        setbacks for others, across the breadth of the United States.</p>
+
+    <p>For the West Coast and across the South, that likely means heavy precipitation and
+        snowfall; the East Coast and North can expect slightly warmer temperatures.
+        Although a deluge sounds like the answer to California's prayers, one season of
+        rainfall will hardly relieve the drought-stricken state. Nevertheless,
+        Shon Hiatt, professor at the USC Marshall School of Business, is optimistic,
+        "at the California level, any more water is great."</p>
+</article>
+
+<article>
+    <h1>September Weather</h1>
+    <p>The September average temperature across global land and ocean surfaces was 1.62°F (0.90°C)
+        above the 20th century average&amp;mdash. This was the highest September temperature
+        on record, surpassing the previous record set last year by +0.12°F (+0.19°C).
+        September's high temperature was also the greatest rise above average for any month
+        in the 136-year historical record, surpassing the previous record set in both
+        February and March this year by 0.02°F (0.01°C).</p>
+</article>
+
+<article>
+    <h1>Current Weather</h1>
+    <p>Another round of heavy rain is expected to move from the southern Plains Friday into
+        the deep south Saturday. Rainfall accumulation will be 1 to 3 inches in many areas,
+        with locally heavier amounts. Several rounds of heavy rain will also affect the
+        Pacific Northwest Friday through the weekend.</p>
+</article>
+
+
+
+
+</body></html>
