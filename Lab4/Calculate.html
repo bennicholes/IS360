@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function btnAdd_Click(){
+            var op1 = document.getElementById("inOpOne");
+            var op2 = document.getElementById('inOpTwo');
+            var opResult = document.getElementById('lblResult');
+            var op1Value = op1.value;
+            var op2Value = op2.value;
+
+            op1Value = parseFloat(op1Value);
+            op2Value = parseFloat(op2Value);
+            var op3Value;
+            op3Value = op1Value + op2Value;
+            lblResult.innerHTML = op3Value;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <fieldset>
+                <label for="inOpOne">Operand:</label>
+                <input type="number" id="inOpOne"/>
+                <label for="inOpTwo">Operand:</label>
+                <input type="number" id="inOpTwo"></input>
+                <br />
+                <input type="button" id="btnAdd" onclick="btnAdd_Click()" value="Add" />
+                <span id="lblResult"></span>
+        </fieldset>
+</body>
+</html>
+
+
+<!--100-->

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function Collapse(){
+            var elements = document.getElementsByTagName("li");
+            var elements;
+            for (x = 0; x < elements.length; x++){
+                elements[x].style.display = "none";
+            }
+        }
+
+        function Expand(){
+            var elements = document.getElementsByTagName("li");
+            var elements;
+            for (x = 0; x < elements.length; x++){
+                elements[x].style.display = "block";
+            }           
+        }
+
+        function ExpandC(){
+            var elements = document.getElementsByClassName("hideList");
+            var elements;
+            for (x = 0; x < elements.length; x++){
+                elements[x].style.display = "block";
+            }           
+        }
+
+        function CollapseC(){
+            var elements = document.getElementsByClassName("hideList");
+            var elements;
+            for (x = 0; x < elements.length; x++){
+                elements[x].style.display = "none";
+            }           
+        }
+    </script>
+
+</head>
+<body>
+<span id="spanDate"></span> 
+</br>
+<span id="spnNav"></span>
+<ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul>
+
+<ul>
+    <li class="hideList">Item 1</li>
+    <li class="hideList">Item 1</li>
+    <li class="hideList">Item 1</li>
+</ul>
+
+<button id="btnHideP" onclick="Collapse()">Hide all list items</button>
+<button id="btnShowP" onclick="Expand()">Show all list items</button>
+
+
+<button id="btnHideC" onclick="CollapseC()">Hide all list items for class hideList</button>
+<button id="btnShowC" onclick="ExpandC()">Show all list items for class hideList</button>
+
+<script>
+var x;
+x = document.getElementById('spanDate');
+x.innerHTML = Date();
+
+var y;
+y = document.getElementById('spnNav');
+y.innerHTML = navigator.appName + " " + " Java Enabled " + navigator.javaEnabled();
+
+</script>
+</body>
+</html>
+
+
+<!--100-->

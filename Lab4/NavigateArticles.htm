@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function articleContentShow(obj){
+            var elements = obj.childNodes;
+            for(x=0; x < elements.length; x++){
+                if (elements[x].nodeType == 1){
+                    if (elements[x].tagName != "H1"){
+                        elements[x].style.display = "block"
+                    }
+                }
+            }
+        }
+
+        function articleContentHide(obj){
+            var elements = obj.childNodes;
+            for(x=0; x < elements.length; x++){
+                if (elements[x].nodeType == 1){
+                    if (elements[x].tagName != "H1"){
+                        elements[x].style.display = "none"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <article id="article1" onmouseover="articleContentShow(this)" onmouseout="articleContentHide(this)">
+        <h1>Article Test 1</h1>
+        <p>Hello I am ben Hello I am ben Hello I am ben Hello I am ben
+        </p>
+    </article>
+
+    <article id="article2" onmouseover="articleContentShow(this)" onmouseout="articleContentHide(this)">
+        <h1>Article Test 2</h1>
+        <p>Hello I am ben Hello I am ben Hello I am ben Hello I am ben
+        </p>
+    </article>
+</body>
+</html>
+
+
+<!--100-->
