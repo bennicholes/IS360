@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Loan Payment</title>
+    <script src="script.js"></script>
+</head>
+<body>
+<h1>Benjamin Nicholes</h1>
+    <br />
+    <fieldset>
+        <legend>Loan Payments</legend>
+        <table>
+            <tr>
+                <td>Initial Loan Amount:</td>
+                <td><input type="number" id="initialLoan" /></td>
+            </tr>
+            <tr>
+                <td>Number of Periods (Years):</td>
+                <td><input type="number" id="numPeriods" /></td>
+            </tr>
+            <tr>
+                <td>Interest Rate (Years):</td>
+                <td><input type="number" id="initialRate" /></td>
+            </tr>
+        </table>
+    </fieldset>
+    <br />
+    <br />
+    <input id="calculate" type="button" value="Calculate Loan Payment"
+           onclick="calculate()" />
+    <br />
+    <br />
+    <br />
+    <fieldset>
+        <legend>Results</legend>
+        <table id="output">
+            <tr>
+                <td>Beg. Balance</td>
+                <td>Payment</td>
+                <td>Interest</td>
+                <td>Principal</td>
+                <td>Balance</td>
+                <td>Period</td>
+            </tr>
+        </table>
+    </fieldset>
+    <br />
+</body>
+</html>
